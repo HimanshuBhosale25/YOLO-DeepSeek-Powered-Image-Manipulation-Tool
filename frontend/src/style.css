@@ -1,0 +1,21 @@
+:root {
+    --bg-dark: #1a1a1a;
+    --bg-darker: #0e0e0e;
+    --text-light: #f0f0f0;
+    --input-bg: #282828;
+    --input-border: #3a3a3a;
+    --color-primary: #5eead4;
+    --color-primary-hover: #2dd4bf;
+    --bg-loading: #333;
+    --color-error: #e57373;
+    --shadow-default: rgba(0, 0, 0, 0.4);
+    --border-radius-default: 16px;
+    --transition-default: 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    --gradient-bg: radial-gradient(ellipse at top left, #212121, #181818, #141414, #121212);
+    --button-glow: rgba(94, 234, 212, 0.6);
+}
+
+html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}

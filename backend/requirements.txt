@@ -1,0 +1,11 @@
+fastapi
+numpy
+groq
+pillow
+python-multipart
+python-dotenv
+opencv-python
+opencv-contrib-python
+ultralytics
+uvicorn
+requests

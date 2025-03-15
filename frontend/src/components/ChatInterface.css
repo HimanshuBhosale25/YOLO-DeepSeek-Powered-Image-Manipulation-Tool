@@ -1,0 +1,250 @@
+/* 🌐 Chat Interface - Glassmorphic & Futuristic Design */
+.chat-interface {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    max-width: 1300px;
+    padding: 90px;
+    border-radius: var(--border-radius-default);
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 14px 40px var(--shadow-default), 0 0 25px var(--button-glow);
+    margin: 30px auto;
+    text-align: center;
+    transition: transform var(--transition-default), box-shadow var(--transition-default);
+    position: relative;
+    overflow: visible;
+    z-index: 1;
+}
+
+.chat-interface.image-uploaded {
+    text-align: left;
+    padding: 20px;
+}
+
+/* 🌌 Fullscreen Gradient Background */
+body {
+    min-height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background: var(--gradient-bg);
+    color: var(--text-light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.input-title-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.chat-interface.image-uploaded .input-title-wrapper {
+    justify-content: flex-start;
+}
+
+/* 🌟 Title Styling (Matching Tutorial Screen) */
+.app-title {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    margin-bottom: 24px;
+    font-weight: 800;
+    background: linear-gradient(90deg, var(--color-primary), var(--color-primary-hover));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: -0.5px;
+    line-height: 1.2;
+    padding-bottom: 5px;
+    transform: translateY(-2px);
+    text-align: center;
+    margin-right: 20px;
+}
+
+.chat-interface.image-uploaded .app-title {
+    margin-right: 10px;
+    font-size: clamp(2rem, 5vw, 3rem);
+    margin-bottom: 0;
+    text-align: left;
+}
+
+.upload-container {
+    display: inline-block;
+}
+
+/* 📝 Input & Buttons */
+.input-area {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.prompt-textarea {
+    padding: 10px;
+    border: 2px solid var(--input-border);
+    border-radius: var(--border-radius-default);
+    font-size: 0.9em;
+    background-color: var(--input-bg);
+    color: var(--text-light);
+    width: 100%;
+    transition: border-color var(--transition-default), box-shadow var(--transition-default);
+    margin-bottom: 10px;
+    min-height: 60px;
+    resize: none;
+}
+
+
+
+/* 🔘 Process & Upload Buttons */
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px;
+    width: 100%;
+}
+
+.process-button,
+.upload-button {
+    background: linear-gradient(135deg, var(--color-primary), var(--color-primary-hover));
+    color: white;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 50px;
+    font-size: 0.9em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.35s ease;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3), 0 0 18px var(--button-glow);
+    flex: 1;
+    margin: 0 5px;
+    margin-bottom: 5px;
+}
+
+.process-button:hover,
+.upload-button:hover {
+    transform: translateY(-4px) scale(1.03);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4), 0 0 25px var(--button-glow);
+}
+
+.process-button:active,
+.upload-button:active {
+    transform: scale(0.96);
+}
+
+/* 🎨 Image Display */
+.image-content-wrapper {
+    display: flex;
+    justify-content: center; /* Center the images horizontally */
+    align-items: flex-start; /* Align items to the start vertically */
+    gap: 20px; /* Reduced gap between images */
+    flex-wrap: wrap; /* Allow wrapping of images */
+    width: 100%;
+    max-width: 900px; /* Prevents excessive width */
+    margin: 0 auto; /* Center the wrapper itself */
+}
+
+.image-display-container {
+    display: flex;
+    justify-content: center; /* Center the images horizontally */
+    align-items: flex-start; /* Align items to the start vertically */
+    flex-wrap: wrap; /* Allow wrapping of images */
+    gap: 40px; /* Adjusted gap for better spacing */
+    width: 100%;
+}
+
+.image-display {
+    flex: 0 1 auto; /* Allow the images to grow and shrink based on content */
+    max-width: 90%; /* Set a maximum width to prevent overflow */
+    max-height: 450px; /* Set a maximum height for the container */
+    border-radius: 12px; /* Slightly reduced */
+    overflow: hidden; /* Hide overflow */
+    box-shadow: 0 8px 18px var(--shadow-default);
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.image-label {
+    font-size: 0.9em;
+    font-weight: bold;
+    margin-bottom: 6px;
+    color: var(--text-light);
+}
+
+.processed-image {
+    width: 100%; /* Full width of the container */
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+    object-fit: contain; /* Preserve aspect ratio */
+    max-height: 260px; /* Limit height to prevent overflow */
+    max-width: 100%; /* Ensure it does not exceed the container width */
+}
+
+
+
+
+/* 🎨 Download Button Container */
+.download-button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+/* 🎨 Download Button */
+.download-button {
+    background: linear-gradient(135deg, var(--color-primary), var(--color-primary-hover));
+    color: white;
+    padding: 6px 14px;
+    border: none;
+    border-radius: 50px;
+    font-size: 0.8em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.35s ease;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3), 0 0 18px var(--button-glow);
+    margin: 0 auto;
+}
+
+.download-button:hover {
+    transform: translateY(-4px) scale(1.03);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4), 0 0 25px var(--button-glow);
+}
+
+.download-button:active {
+    transform: scale(0.96);
+}
+
+/* 📱 Mobile Adjustments */
+@media (max-width: 768px) {
+    .chat-interface {
+        padding: 18px;
+    }
+
+    .app-title {
+        font-size: 1.8rem;
+    }
+
+    .process-button,
+    .upload-button {
+        width: 100%;
+        padding: 8px 14px;
+        margin: 4px 0;
+    }
+
+    .image-display {
+        width: 100%;
+        margin: 4px 0;
+    }
+
+    .processed-image {
+        max-height: 350px;
+    }
+}

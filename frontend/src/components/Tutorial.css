@@ -1,0 +1,194 @@
+/* 📚 Fullscreen Tutorial Screen with Gradient & Blobs */
+.tutorial-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    padding: 30px;
+    background: var(--gradient-bg); /* Same gradient as welcome */
+    color: var(--text-light);
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+}
+
+/* 💫 Floating Gradient Blobs (Soft Glow) - Matching Welcome */
+.tutorial-screen::before,
+.tutorial-screen::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(100px);
+    opacity: 0.35;
+    z-index: 0;
+    animation: float 18s infinite alternate ease-in-out;
+}
+
+.tutorial-screen::before {
+    width: 420px;
+    height: 420px;
+    background: var(--color-primary);
+    top: -120px;
+    left: -120px;
+}
+
+.tutorial-screen::after {
+    width: 520px;
+    height: 520px;
+    background: var(--color-primary-hover);
+    bottom: -170px;
+    right: -170px;
+}
+
+/* 🧊 Glassmorphic Tutorial Card - Matching Welcome */
+.tutorial-content {
+    padding: 60px 50px;
+    border-radius: var(--border-radius-default);
+    background: rgba(255, 255, 255, 0.07);
+    backdrop-filter: blur(18px);
+    box-shadow: 0 16px 50px rgba(0, 0, 0, 0.4), 0 0 30px var(--button-glow);
+    max-width: 750px;
+    width: 100%;
+    text-align: left;
+    position: relative;
+    z-index: 1;
+    transition: transform var(--transition-default), box-shadow var(--transition-default);
+}
+
+/* Floating Lift Effect */
+.tutorial-content:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 24px 70px rgba(0, 0, 0, 0.5), 0 0 40px var(--button-glow);
+}
+
+/* 🌈 Gradient Heading like Welcome */
+.tutorial-content h2 {
+    font-size: clamp(2.2rem, 5vw, 3rem);
+    margin-bottom: 24px;
+    font-weight: 800;
+    background: linear-gradient(90deg, var(--color-primary), var(--color-primary-hover));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: -0.5px;
+    text-align: center;
+}
+
+/* 📝 Styled Ordered List */
+.tutorial-content ol {
+    font-size: clamp(1.1rem, 1vw, 1.5rem);
+    margin-bottom: 36px;
+    padding-left: 20px;
+    line-height: 1.4;
+    opacity: 0.9;
+}
+
+/* List Items */
+.tutorial-content li {
+    margin-bottom: 12px;
+}
+
+/* 🚀 Consistent Gradient Button */
+.go-to-chat-button {
+    background: linear-gradient(135deg, var(--color-primary), var(--color-primary-hover));
+    color: white;
+    padding: 18px 40px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: all 0.35s ease;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25), 0 0 18px var(--button-glow);
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+    max-width: 300px;
+}
+
+/* Button Hover with Glow */
+.go-to-chat-button:hover {
+    transform: translateY(-4px) scale(1.03);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4), 0 0 25px var(--button-glow);
+}
+
+/* Tap/Click Feedback */
+.go-to-chat-button:active {
+    transform: scale(0.96);
+}
+
+/* 🌊 Floating Animation */
+@keyframes float {
+    from {
+        transform: translateY(0px);
+    }
+    to {
+        transform: translateY(30px);
+    }
+}
+
+/* 📲 Mobile Responsiveness */
+/* 📲 Mobile Responsiveness */
+/* Media Queries */
+@media (max-width: 768px) {
+    .tutorial-content {
+        padding: 40px 25px;
+        max-height: 80vh; /* Limit height to 80% of viewport height */
+        overflow-y: auto; /* Enable vertical scrolling */
+        padding-bottom: 80px; /* Add bottom padding for button visibility */
+    }
+
+    .go-to-chat-button {
+        width: 90%; /* Adjust button width */
+        padding: 16px 0; /* Adjust button padding */
+        margin: 20px auto; /* Center button */
+    }
+
+    .tutorial-content h2 {
+        font-size: clamp(1.8rem, 5vw, 2.5rem); /* Further reduce title size */
+    }
+
+    .tutorial-content ol {
+        font-size: clamp(0.9rem, 1vw, 1.2rem); /* Further reduce list size */
+        padding-left: 15px;
+    }
+
+    .tutorial-screen {
+        padding: 15px; /* Further reduce screen padding */
+    }
+
+    .tutorial-screen::before,
+    .tutorial-screen::after {
+        filter: blur(60px); /* Further reduce blur */
+    }
+
+    .tutorial-screen::before {
+        width: 250px; /* Further reduce blob size */
+        height: 250px;
+        top: -60px;
+        left: -60px;
+    }
+
+    .tutorial-screen::after {
+        width: 350px;
+        height: 350px;
+        bottom: -100px;
+        right: -100px;
+    }
+}
+
+@media (max-width: 480px) {
+    .tutorial-screen::before,
+    .tutorial-screen::after {
+        display: none; /* Hide blobs on smaller screens */
+    }
+
+    .tutorial-content {
+        padding-bottom: 60px; /* Further adjust padding */
+    }
+}
