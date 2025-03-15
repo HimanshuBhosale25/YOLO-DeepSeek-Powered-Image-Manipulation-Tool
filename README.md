@@ -4,19 +4,19 @@
 
 ## Key AI Features 🌟
 
-* **AI-Driven Image Manipulation:** Transform images with text prompts. 🧠
-* **Advanced Object Segmentation (YOLOv8):** Precise, targeted edits. 🎯
-* **Natural Language Understanding (DeepSeek):** Interprets user prompts. 💬
-* **Sophisticated Masking & Blending (OpenCV):** Realistic results. 🎭
-* **End-to-End Deep Learning Pipeline:** Complete image transformation. 🔄
+* **AI-Driven Image Manipulation:** Transform images with text prompts. 
+* **Advanced Object Segmentation (yolov8l-seg):** Precise, targeted edits. 
+* **Natural Language Understanding (deepseek-r1-distill-llama-70b):** Interprets user prompts. 
+* **Sophisticated Masking & Blending (OpenCV):** Realistic results. 
+* **End-to-End Deep Learning Pipeline:** Complete image transformation. 
 
 ## User-Friendly Web Interface (React) 🌐
 
-* **Intuitive React Frontend:** Seamless user experience. 👀
-* **Session-Based Editing:** Stack multiple edits. 🔄
-* **Real-time Previews:** Instant feedback. 🖼️
-* **Download Functionality:** Easy image download. 📥
-* **Responsive Design:** Works on all devices. 📱💻
+* **Intuitive React Frontend:** Seamless user experience. 
+* **Session-Based Editing:** Stack multiple edits. 
+* **Real-time Previews:** Instant feedback. 
+* **Download Functionality:** Easy image download. 
+* **Responsive Design:** Works on all devices. 
 
 ## Screenshots of UI:📸
 
