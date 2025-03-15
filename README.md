@@ -23,28 +23,36 @@
 ### **Welcome Screen:**
 ![WS](images/i4.png) 
 
+
 ### **Tutorial:**
 ![T](images/i5.png)
+
 
 ### **Example 1:**
 ![Ex1](images/i6.png)
 
+
 ### **Example 2:**
 ![Ex2](images/i7.png)
 
+
 ### **Example 3:**
 ![Ex3](images/i8.png)
+
 
 ## Segmentation and Masking:📸
 
 ### **Original Image:**
 ![OG](images/i1.png)
 
+
 ### **Object Detection:**
 ![OD](images/i2.png)
 
+
 ### **Object Making:**
 ![OM](images/i3.png)
+
 
 
 
