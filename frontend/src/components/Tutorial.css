@@ -1,4 +1,3 @@
-/* 📚 Fullscreen Tutorial Screen with Gradient & Blobs */
 .tutorial-screen {
     display: flex;
     justify-content: center;
@@ -6,14 +5,13 @@
     height: 100vh;
     width: 100vw;
     padding: 30px;
-    background: var(--gradient-bg); /* Same gradient as welcome */
+    background: var(--gradient-bg);
     color: var(--text-light);
     box-sizing: border-box;
     position: relative;
     overflow: hidden;
 }
 
-/* 💫 Floating Gradient Blobs (Soft Glow) - Matching Welcome */
 .tutorial-screen::before,
 .tutorial-screen::after {
     content: '';
@@ -41,7 +39,6 @@
     right: -170px;
 }
 
-/* 🧊 Glassmorphic Tutorial Card - Matching Welcome */
 .tutorial-content {
     padding: 60px 50px;
     border-radius: var(--border-radius-default);
@@ -56,13 +53,11 @@
     transition: transform var(--transition-default), box-shadow var(--transition-default);
 }
 
-/* Floating Lift Effect */
 .tutorial-content:hover {
     transform: translateY(-12px);
     box-shadow: 0 24px 70px rgba(0, 0, 0, 0.5), 0 0 40px var(--button-glow);
 }
 
-/* 🌈 Gradient Heading like Welcome */
 .tutorial-content h2 {
     font-size: clamp(2.2rem, 5vw, 3rem);
     margin-bottom: 24px;
@@ -76,7 +71,6 @@
     text-align: center;
 }
 
-/* 📝 Styled Ordered List */
 .tutorial-content ol {
     font-size: clamp(1.1rem, 1vw, 1.5rem);
     margin-bottom: 36px;
@@ -85,12 +79,10 @@
     opacity: 0.9;
 }
 
-/* List Items */
 .tutorial-content li {
     margin-bottom: 12px;
 }
 
-/* 🚀 Consistent Gradient Button */
 .go-to-chat-button {
     background: linear-gradient(135deg, var(--color-primary), var(--color-primary-hover));
     color: white;
@@ -111,64 +103,60 @@
     max-width: 300px;
 }
 
-/* Button Hover with Glow */
 .go-to-chat-button:hover {
     transform: translateY(-4px) scale(1.03);
     box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4), 0 0 25px var(--button-glow);
 }
 
-/* Tap/Click Feedback */
 .go-to-chat-button:active {
     transform: scale(0.96);
 }
 
-/* 🌊 Floating Animation */
 @keyframes float {
     from {
         transform: translateY(0px);
     }
+
     to {
         transform: translateY(30px);
     }
 }
 
-/* 📲 Mobile Responsiveness */
-/* 📲 Mobile Responsiveness */
-/* Media Queries */
+
 @media (max-width: 768px) {
     .tutorial-content {
         padding: 40px 25px;
-        max-height: 80vh; /* Limit height to 80% of viewport height */
-        overflow-y: auto; /* Enable vertical scrolling */
-        padding-bottom: 80px; /* Add bottom padding for button visibility */
+        max-height: 80vh;
+        overflow-y: auto;
+        padding-bottom: 80px;
     }
 
     .go-to-chat-button {
-        width: 90%; /* Adjust button width */
-        padding: 16px 0; /* Adjust button padding */
-        margin: 20px auto; /* Center button */
+        width: 90%;
+        padding: 16px 0;
+        margin: 20px auto;
     }
 
     .tutorial-content h2 {
-        font-size: clamp(1.8rem, 5vw, 2.5rem); /* Further reduce title size */
+        font-size: clamp(1.8rem, 5vw, 2.5rem);
     }
 
     .tutorial-content ol {
-        font-size: clamp(0.9rem, 1vw, 1.2rem); /* Further reduce list size */
+        font-size: clamp(0.9rem, 1vw, 1.2rem);
         padding-left: 15px;
     }
 
     .tutorial-screen {
-        padding: 15px; /* Further reduce screen padding */
+        padding: 15px;
     }
 
     .tutorial-screen::before,
     .tutorial-screen::after {
-        filter: blur(60px); /* Further reduce blur */
+        filter: blur(60px);
     }
 
     .tutorial-screen::before {
-        width: 250px; /* Further reduce blob size */
+        width: 250px;
         height: 250px;
         top: -60px;
         left: -60px;
@@ -183,12 +171,13 @@
 }
 
 @media (max-width: 480px) {
+
     .tutorial-screen::before,
     .tutorial-screen::after {
-        display: none; /* Hide blobs on smaller screens */
+        display: none;
     }
 
     .tutorial-content {
-        padding-bottom: 60px; /* Further adjust padding */
+        padding-bottom: 60px;
     }
 }

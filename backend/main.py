@@ -22,7 +22,6 @@ app.add_middleware(
 
 app.include_router(image_api.router)
 
-
 @app.get("/test")
 async def test():
   return {"message": "FastAPI is working!"}

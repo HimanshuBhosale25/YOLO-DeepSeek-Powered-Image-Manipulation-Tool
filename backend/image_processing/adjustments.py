@@ -156,60 +156,16 @@ def adjust_channel_mixer(image, red_r=1.0, red_g=0.0, red_b=0.0,
     return image
 
 def adjust_color_factors(image_pil, red_factor, green_factor, blue_factor):
-    """Adjusts the red, green, and blue color channels of a PIL image.
-
-    Args:
-        image_pil: The input PIL image.
-        red_factor: The factor to multiply the red channel by.
-        green_factor: The factor to multiply the green channel by.
-        blue_factor: The factor to multiply the blue channel by.
-
-    Returns:
-        The adjusted PIL image.
-    """
+    
     image_np = np.array(image_pil)
     image_np = image_np.astype(np.float32)
 
-    image_np[:, :, 0] *= red_factor  # Red channel
-    image_np[:, :, 1] *= green_factor  # Green channel
-    image_np[:, :, 2] *= blue_factor  # Blue channel
+    image_np[:, :, 0] *= red_factor 
+    image_np[:, :, 1] *= green_factor  
+    image_np[:, :, 2] *= blue_factor  
 
     image_np = np.clip(image_np, 0, 255)
     image_np = image_np.astype(np.uint8)
 
     return Image.fromarray(image_np)
 
-
-def motion_blur(image, size=10, angle=0):
-    kernel = np.zeros((size, size))
-    kernel[int((size - 1) / 2), :] = np.ones(size)
-    kernel /= size
-    return image.filter(ImageFilter.Kernel((size, size), kernel.flatten()))
-
-def dehaze(image, contrast_factor=1.5):
-    enhancer = ImageEnhance.Contrast(image)
-    return enhancer.enhance(contrast_factor)
-
-def add_film_grain(image, intensity=10):
-    image = image.convert('RGB')
-    pixels = np.array(image, dtype=np.int16)
-    noise = np.random.normal(0, intensity, pixels.shape)
-    pixels = np.clip(pixels + noise, 0, 255).astype(np.uint8)
-    return Image.fromarray(pixels)
-
-def hdr_effect(image, detail_factor=2.0):
-    return image.filter(ImageFilter.DETAIL).filter(ImageEnhance.Contrast(image).enhance(detail_factor))
-
-def apply_warm_filter(image, intensity=20):
-    image = image.convert('RGB')
-    pixels = np.array(image, dtype=np.int16)
-    pixels[..., 0] = np.clip(pixels[..., 0] + intensity, 0, 255)  # Increase red
-    pixels[..., 2] = np.clip(pixels[..., 2] - intensity, 0, 255)  # Decrease blue
-    return Image.fromarray(pixels.astype(np.uint8))
-
-def apply_cool_filter(image, intensity=20):
-    image = image.convert('RGB')
-    pixels = np.array(image, dtype=np.int16)
-    pixels[..., 0] = np.clip(pixels[..., 0] - intensity, 0, 255)  # Decrease red
-    pixels[..., 2] = np.clip(pixels[..., 2] + intensity, 0, 255)  # Increase blue
-    return Image.fromarray(pixels.astype(np.uint8))

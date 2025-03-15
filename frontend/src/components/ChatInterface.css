@@ -1,4 +1,3 @@
-/* 🌐 Chat Interface - Glassmorphic & Futuristic Design */
 .chat-interface {
     display: flex;
     flex-direction: column;
@@ -22,7 +21,6 @@
     padding: 20px;
 }
 
-/* 🌌 Fullscreen Gradient Background */
 body {
     min-height: 100vh;
     width: 100vw;
@@ -49,7 +47,6 @@ body {
     justify-content: flex-start;
 }
 
-/* 🌟 Title Styling (Matching Tutorial Screen) */
 .app-title {
     font-size: clamp(2.5rem, 6vw, 4rem);
     margin-bottom: 24px;
@@ -78,7 +75,6 @@ body {
     display: inline-block;
 }
 
-/* 📝 Input & Buttons */
 .input-area {
     display: flex;
     flex-direction: column;
@@ -100,9 +96,6 @@ body {
     resize: none;
 }
 
-
-
-/* 🔘 Process & Upload Buttons */
 .button-container {
     display: flex;
     justify-content: space-between;
@@ -138,33 +131,32 @@ body {
     transform: scale(0.96);
 }
 
-/* 🎨 Image Display */
 .image-content-wrapper {
     display: flex;
-    justify-content: center; /* Center the images horizontally */
-    align-items: flex-start; /* Align items to the start vertically */
-    gap: 20px; /* Reduced gap between images */
-    flex-wrap: wrap; /* Allow wrapping of images */
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    flex-wrap: wrap;
     width: 100%;
-    max-width: 900px; /* Prevents excessive width */
-    margin: 0 auto; /* Center the wrapper itself */
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 .image-display-container {
     display: flex;
-    justify-content: center; /* Center the images horizontally */
-    align-items: flex-start; /* Align items to the start vertically */
-    flex-wrap: wrap; /* Allow wrapping of images */
-    gap: 40px; /* Adjusted gap for better spacing */
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 40px;
     width: 100%;
 }
 
 .image-display {
-    flex: 0 1 auto; /* Allow the images to grow and shrink based on content */
-    max-width: 90%; /* Set a maximum width to prevent overflow */
-    max-height: 450px; /* Set a maximum height for the container */
-    border-radius: 12px; /* Slightly reduced */
-    overflow: hidden; /* Hide overflow */
+    flex: 0 1 auto;
+    max-width: 90%;
+    max-height: 450px;
+    border-radius: 12px;
+    overflow: hidden;
     box-shadow: 0 8px 18px var(--shadow-default);
     transition: transform 0.3s ease;
     text-align: center;
@@ -178,18 +170,14 @@ body {
 }
 
 .processed-image {
-    width: 100%; /* Full width of the container */
-    height: auto; /* Maintain aspect ratio */
+    width: 100%;
+    height: auto;
     display: block;
-    object-fit: contain; /* Preserve aspect ratio */
-    max-height: 260px; /* Limit height to prevent overflow */
-    max-width: 100%; /* Ensure it does not exceed the container width */
+    object-fit: contain;
+    max-height: 260px;
+    max-width: 100%;
 }
 
-
-
-
-/* 🎨 Download Button Container */
 .download-button-container {
     display: flex;
     justify-content: center;
@@ -198,7 +186,6 @@ body {
     width: 100%;
 }
 
-/* 🎨 Download Button */
 .download-button {
     background: linear-gradient(135deg, var(--color-primary), var(--color-primary-hover));
     color: white;
@@ -222,7 +209,6 @@ body {
     transform: scale(0.96);
 }
 
-/* 📱 Mobile Adjustments */
 @media (max-width: 768px) {
     .chat-interface {
         padding: 18px;

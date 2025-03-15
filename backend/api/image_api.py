@@ -16,9 +16,8 @@ router = APIRouter()
 
 yolo_model = YOLO('yolov8l-seg.pt')
 
-# In-memory session store
 sessions = {}
-SESSION_TIMEOUT = 3600  # 1 hour
+SESSION_TIMEOUT = 3600  
 
 def cleanup_sessions():
     current_time = time.time()

@@ -1,4 +1,3 @@
-/* 🌐 Global Fix & Fullscreen Alignment */
 *,
 *::before,
 *::after {
@@ -7,11 +6,12 @@
     padding: 0;
 }
 
-html, body {
-    width: 100vw; /* Full viewport width */
+html,
+body {
+    width: 100vw;
     margin: 0;
     padding: 0;
-    background: var(--gradient-bg); /* Gradient background */
+    background: var(--gradient-bg);
     color: var(--text-light);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     position: relative;
@@ -24,7 +24,6 @@ html, body {
     flex-direction: column;
 }
 
-/* Prevent body shrink issues */
 body {
     min-height: 100vh;
     min-width: 100vw;
@@ -33,7 +32,6 @@ body {
 }
 
 
-/* 🌌 Fullscreen Gradient Background */
 .welcome-screen {
     display: flex;
     justify-content: center;
@@ -41,14 +39,13 @@ body {
     height: 100%;
     width: 100%;
     padding: 30px;
-    background: var(--gradient-bg); /* Smooth radial gradient */
+    background: var(--gradient-bg);
     color: var(--text-light);
     position: relative;
     overflow: hidden;
     box-sizing: border-box;
 }
 
-/* 💫 Floating Gradient Blobs (Soft Glow) */
 .welcome-screen::before,
 .welcome-screen::after {
     content: '';
@@ -76,7 +73,6 @@ body {
     right: -170px;
 }
 
-/* ✨ Glassmorphic Hero Card */
 .welcome-content {
     padding: 60px 50px;
     border-radius: var(--border-radius-default);
@@ -91,29 +87,26 @@ body {
     transition: transform var(--transition-default), box-shadow var(--transition-default);
 }
 
-/* Floating Lift Effect */
 .welcome-content:hover {
     transform: translateY(-12px);
     box-shadow: 0 24px 70px rgba(0, 0, 0, 0.5), 0 0 40px var(--button-glow);
 }
 
-/* 🌈 Gradient Headline */
 .welcome-content h1 {
     font-size: clamp(2.5rem, 6vw, 4rem);
     margin-bottom: 24px;
     font-weight: 800;
     background: linear-gradient(90deg, var(--color-primary), var(--color-primary-hover));
-    background-clip: text; /* Standard for full support */
-    -webkit-background-clip: text; /* Safari/Chrome */
-    color: transparent; /* Standard fallback */
-    -webkit-text-fill-color: transparent; /* Safari/Chrome */
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
     letter-spacing: -0.5px;
-    line-height: 1.2; /* Adjust as needed */
-    padding-bottom: 5px; /* Adjust as needed */
-    transform: translateY(-2px); /* adjust as needed */
+    line-height: 1.2;
+    padding-bottom: 5px;
+    transform: translateY(-2px);
 }
 
-/* 💡 Subtle Paragraph */
 .welcome-content p {
     font-size: clamp(1.1rem, 2vw, 1.5rem);
     margin-bottom: 36px;
@@ -122,7 +115,6 @@ body {
     font-weight: 400;
 }
 
-/* ⚙️ Futuristic Rounded Button */
 .get-started-button {
     background: linear-gradient(135deg, var(--color-primary), var(--color-primary-hover));
     color: white;
@@ -139,62 +131,58 @@ body {
     overflow: hidden;
 }
 
-/* Button Hover with Glow */
 .get-started-button:hover {
     transform: translateY(-4px) scale(1.03);
     box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4), 0 0 25px var(--button-glow);
 }
 
-/* Tap Feedback */
 .get-started-button:active {
     transform: scale(0.96);
 }
 
-/* 🌊 Smooth Floating Animation */
 @keyframes float {
     from {
         transform: translateY(0px);
     }
+
     to {
         transform: translateY(30px);
     }
 }
 
-/* 📲 Mobile Responsiveness */
-/* 📲 Mobile Responsiveness */
 @media (max-width: 768px) {
     .welcome-content {
-        padding: 20px 15px; /* Reduced padding for mobile */
+        padding: 20px 15px;
     }
 
     .get-started-button {
         width: 100%;
-        padding: 15px 0; /* Adjusted padding */
+        padding: 15px 0;
     }
 
     .welcome-content h1 {
-        font-size: clamp(1.5rem, 5vw, 2.5rem); /* Smaller title on mobile */
-        margin-bottom: 10px; /* Reduced margin */
+        font-size: clamp(1.5rem, 5vw, 2.5rem);
+        margin-bottom: 10px;
     }
 
     .welcome-content p {
-        font-size: clamp(0.9rem, 2vw, 1.2rem); /* Smaller paragraph on mobile */
-        margin-bottom: 10px; /* Reduced margin */
+        font-size: clamp(0.9rem, 2vw, 1.2rem);
+        margin-bottom: 10px;
     }
 
     .welcome-screen {
-        padding: 10px; /* Further reduced padding on mobile */
-        max-height: 80vh; /* Limit height to prevent overflow */
-        overflow: hidden; /* Prevent scrolling */
+        padding: 10px;
+        max-height: 80vh;
+        overflow: hidden;
     }
 
     .welcome-screen::before,
     .welcome-screen::after {
-        filter: blur(80px); /* Reduced blur on mobile */
+        filter: blur(80px);
     }
 
     .welcome-screen::before {
-        width: 250px; /* Further reduced blob size on mobile */
+        width: 250px;
         height: 250px;
         top: -60px;
         left: -60px;
@@ -209,25 +197,26 @@ body {
 }
 
 @media (max-width: 480px) {
+
     .welcome-screen::before,
     .welcome-screen::after {
-        display: none; /* Hide blobs on very small screens */
+        display: none;
     }
 
     .welcome-content {
-        padding: 40px; /* Further reduce padding */
+        padding: 40px;
     }
 
     .get-started-button {
-        padding: 10px 0; /* Adjust button padding */
-        font-size: 0.9rem; /* Smaller button text */
+        padding: 10px 0;
+        font-size: 0.9rem;
     }
 
     .welcome-content h1 {
-        font-size: clamp(1.6rem, 5vw, 1.8rem); /* Smaller title on very small screens */
+        font-size: clamp(1.6rem, 5vw, 1.8rem);
     }
 
     .welcome-content p {
-        font-size: clamp(0.9rem, 2vw, 0.9rem); /* Smaller paragraph on very small screens */
+        font-size: clamp(0.9rem, 2vw, 0.9rem);
     }
 }
