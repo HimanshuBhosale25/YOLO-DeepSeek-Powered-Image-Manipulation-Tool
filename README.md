@@ -1,22 +1,22 @@
-# AI Image Transformer: Deep Learning Powered Image Editing with a User-Friendly Web Interface 🧠✨🌐
+# AI Image Transformer: Deep Learning Powered Image Editing 🧠✨🌐
 
-**This project demonstrates the power of deepseek-r1-distill-llama-70b model to handle and manipulate complex prompts while utilizing YOLOv8l-seg model for segmentation and Pillow library for image manipulation, packaged within a user-friendly web application. It highlights the synergy between advanced AI models and modern frontend development, making complex image editing accessible to professional editors as well as general audience. 🚀**
+**Transform images with natural language prompts using AI. This project integrates powerful models for segmentation and prompt understanding, packaged in a user-friendly web interface. 🚀**
 
-## Key Deep Learning and AI Features 🌟
+## Key AI Features 🌟
 
-* **AI-Driven Image Manipulation:** Witness the transformative power of large language models as your text prompts are translated into precise and nuanced image edits. 🧠
-* **Advanced Object Segmentation (YOLOv8):** Leveraging Ultralytics' YOLOv8l-seg for accurate object detection and segmentation, enabling precise, targeted edits on specific image regions. 🎯
-* **Natural Language Understanding (Groq API):** Integrating with the Groq API to harness deepseek-r1-distill-llama-70b for understanding and interpreting user prompts, translating them into actionable image adjustments. 💬
-* **Sophisticated Masking and Blending with OpenCV:** Implementing advanced masking, Inverted Masking and blending techniques using OpenCV, ensuring seamless integration of AI-driven edits for realistic results. 🎭
-* **End-to-End Deep Learning Pipeline:** Demonstrating a complete deep learning pipeline, from natural language input to image output, showcasing the project's AI capabilities. 🔄
+* **AI-Driven Image Manipulation:** Transform images with text prompts. 🧠
+* **Advanced Object Segmentation (YOLOv8):** Precise, targeted edits. 🎯
+* **Natural Language Understanding (DeepSeek):** Interprets user prompts. 💬
+* **Sophisticated Masking & Blending (OpenCV):** Realistic results. 🎭
+* **End-to-End Deep Learning Pipeline:** Complete image transformation. 🔄
 
 ## User-Friendly Web Interface (React) 🌐
 
-* **Intuitive React Frontend:** Provides a seamless and engaging user experience, showcasing modern web development practices with a clean, glassmorphic design and smooth transitions. 👀
-* **Session-Based Editing with Persistent State:** Allows users to stack multiple edits, demonstrating the model's ability to maintain context and refine results across sessions, all managed within the frontend. 🔄
-* **Real-time Previews:** Displays original and processed images side-by-side, providing instant feedback on the AI's performance within the browser. 🖼️
-* **Download Functionality:** Enables users to easily download edited images, completing the end-to-end user experience, handled efficiently by the frontend. 📥
-* **Responsive Design:** Ensures a consistent and enjoyable experience across various devices, showcasing frontend adaptability. 📱💻
+* **Intuitive React Frontend:** Seamless user experience. 👀
+* **Session-Based Editing:** Stack multiple edits. 🔄
+* **Real-time Previews:** Instant feedback. 🖼️
+* **Download Functionality:** Easy image download. 📥
+* **Responsive Design:** Works on all devices. 📱💻
 
 ## Screenshots of UI:📸
 
