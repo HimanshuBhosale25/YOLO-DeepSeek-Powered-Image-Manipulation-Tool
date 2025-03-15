@@ -62,7 +62,7 @@
 
 * Node.js and npm (or yarn) installed for frontend development. 📦
 * Python 3.11 with required deep learning and AI libraries (see Dependencies). 🐍
-* A running backend server (see Backend Setup). ⚙️
+* A running backend server (see Backend Setup). ⚙️ 
 
 ### Installation 🛠️
 
